@@ -50,4 +50,8 @@ public class AppUser{
         this.appUserRole = appUserRole;
     }
 
+    public boolean isEnabled(){
+        return enabled;
+
+    }
 }

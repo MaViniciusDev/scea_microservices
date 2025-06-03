@@ -12,6 +12,7 @@
         <module>eureka-server</module>
         <module>appuser</module>
         <module>gateway</module>
+        <module>auth</module>
     </modules>
 
     <properties>
