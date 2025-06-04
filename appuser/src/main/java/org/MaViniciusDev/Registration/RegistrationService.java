@@ -78,7 +78,7 @@ public class RegistrationService {
         AppUser user = appUserService.findByEmail(email)
                 .orElseThrow(() -> new IllegalStateException("Usuário não encontrado"));
 
-        if (user.isEnabled()) {
+        if (user.getEnabled()) {
             throw new IllegalStateException("Conta já confirmada");
         }
 

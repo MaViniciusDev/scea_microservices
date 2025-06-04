@@ -41,7 +41,7 @@ public class AppUserController {
         appUserService.findByEmail(email).ifPresentOrElse(
                 u -> {
                     response.put("exists", true);
-                    response.put("confirmed", u.isEnabled());
+                    response.put("confirmed", u.getEnabled());
                     response.put("firstName", u.getFirstName());
                     response.put("lastName", u.getLastName());
                 },

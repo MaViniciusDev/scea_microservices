@@ -5,8 +5,8 @@ spring:
     name: Reservations
   datasource:
     username: postgres
-    url: jdbc:postgresql://localhost:5432/Reservations
-    password: admin
+    url: jdbc:postgresql://localhost:5432/reservations
+    password: 7410
   jpa:
     hibernate:
       ddl-auto: create-drop

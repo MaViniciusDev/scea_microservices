@@ -14,7 +14,8 @@
         <module>gateway</module>
         <module>auth</module>
         <module>reservation</module>
-        <module>academicspaces</module>
+        <module>academicspacesservice</module>
+        <module>academicspacesservice</module>
     </modules>
 
     <properties>

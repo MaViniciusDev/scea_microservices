@@ -1,11 +1,11 @@
 server:
-  port: 8000
+  port: 8086
 spring:
   application:
-    name: Auth
+    name: Reservations
   datasource:
     username: postgres
-    url: jdbc:postgresql://localhost:5432/auth
+    url: jdbc:postgresql://localhost:5432/spaces
     password: 7410
   jpa:
     hibernate:

@@ -43,7 +43,7 @@ public class UserQueryController {
                 user.getEmail(),
                 user.getPassword(),
                 user.getAppUserRole().name(),
-                user.isEnabled()
+                user.getEnabled()
         );
 
         return ResponseEntity.ok(dto);
