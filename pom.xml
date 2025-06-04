@@ -13,6 +13,7 @@
         <module>appuser</module>
         <module>gateway</module>
         <module>auth</module>
+        <module>reservation</module>
     </modules>
 
     <properties>
