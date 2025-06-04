@@ -6,14 +6,17 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.MaViniciusDev.Registration.Token.ConfirmationToken;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Getter
 @Setter
 @EqualsAndHashCode
 @NoArgsConstructor
 @Entity
-
-public class AppUser{
+public class AppUser {
 
     @SequenceGenerator(
             name = "user_sequence",
@@ -26,6 +29,7 @@ public class AppUser{
             generator = "user_sequence"
     )
     private Long id;
+
     private String firstName;
     private String lastName;
     private String email;
@@ -36,6 +40,13 @@ public class AppUser{
 
     private Boolean locked = false;
     private Boolean enabled = false;
+
+    @OneToMany(
+            mappedBy = "appUser",
+            cascade = CascadeType.REMOVE,
+            orphanRemoval = true
+    )
+    private List<ConfirmationToken> confirmationTokens = new ArrayList<>();
 
 
     public AppUser(String firstName,
@@ -50,8 +61,4 @@ public class AppUser{
         this.appUserRole = appUserRole;
     }
 
-    public boolean isEnabled(){
-        return enabled;
-
-    }
 }
