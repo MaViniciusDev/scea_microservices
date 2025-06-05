@@ -1,0 +1,35 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: AppUser
+  datasource:
+    username: postgres
+    url: jdbc:postgresql://localhost:5432/AppUser
+    password: admin
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    show-sql: true
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: ucsalscea@gmail.com
+    password: aiuv yvmt ftoh gdos
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+    fetch-registry: true
+    register-with-eureka: true
+
