@@ -1,13 +1,15 @@
 package org.MaViniciusDev.Feign;
 
-import org.MaViniciusDev.DTO.AppUserDTO;
+
+import org.MaViniciusDev.DTO.UserInfoDTO;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.PathVariable;
 
-@FeignClient(name = "AppUser")
+
+@FeignClient(name = "AppUser", path = "/api/v1/users")
 public interface UserServiceClient {
 
-    @GetMapping("/by-email/")
-    AppUserDTO getUserByEmail(@RequestParam("email") String email);
+    @GetMapping("/by-email/{email}")
+    UserInfoDTO getUserByEmail(@PathVariable("email") String email);
 }

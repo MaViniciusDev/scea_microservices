@@ -26,8 +26,8 @@ public class UserQueryController {
     ) {
     }
 
-    @GetMapping("/by-email/")
-    public ResponseEntity<UserInfoDTO> getUserByEmail(@PathVariable String email) {
+    @GetMapping("/by-email/{email}")
+    public ResponseEntity<UserInfoDTO> getUserByEmail(@PathVariable("email") String email) {
         var userOpt = appUserService.findByEmail(email);
         if (userOpt.isEmpty()) {
             throw new ResponseStatusException(

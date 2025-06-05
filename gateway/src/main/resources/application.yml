@@ -18,6 +18,11 @@ spring:
               predicates:
                 - Path=/api/v1/users/**
 
+            - id: Registration
+              uri: lb://AppUser
+              predicates:
+                - Path=/api/v1/registration/**
+
             - id: Auth
               uri: lb://Auth
               predicates:
@@ -27,6 +32,12 @@ spring:
               uri: lb://Reservations
               predicates:
                 - Path=/api/v1/reservations/**
+
+            - id: Spaces
+              uri: lb://Spaces
+              predicates:
+                - Path=/api/v1/spaces/**
+
 eureka:
   client:
     service-url:

@@ -2,7 +2,7 @@ package org.MaViniciusDev;
 
 import lombok.RequiredArgsConstructor;
 import org.MaViniciusDev.DTO.AcademicSpaceDTO;
-import org.MaViniciusDev.DTO.AppUserDTO;
+import org.MaViniciusDev.DTO.UserInfoDTO;
 import org.MaViniciusDev.Exception.ReservationConflictException;
 import org.MaViniciusDev.Exception.ResourceNotFoundException;
 import org.MaViniciusDev.Feign.SpaceServiceClient;
@@ -25,7 +25,7 @@ public class ReservationService {
 
     public Reservation makeReservation(Reservation reservation, String professorEmail) {
 
-        AppUserDTO professor = userServiceClient.getUserByEmail(professorEmail);
+        UserInfoDTO professor = userServiceClient.getUserByEmail(professorEmail);
         if (professor == null) {
             throw new ResourceNotFoundException("Usuário não encontrado: " + professorEmail);
         }
