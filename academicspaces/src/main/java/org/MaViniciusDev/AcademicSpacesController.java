@@ -23,7 +23,7 @@ public class AcademicSpacesController {
     }
 
     @PutMapping("/update/{id}")
-    public ResponseEntity<?> updateSpace(@PathVariable Long id,
+    public ResponseEntity<?> updateSpace(@PathVariable("id") Long id,
                                          @RequestBody AcademicSpaces academicSpaces) {
         try {
             return ResponseEntity.ok(academicSpacesService.updateSpace(id, academicSpaces));
