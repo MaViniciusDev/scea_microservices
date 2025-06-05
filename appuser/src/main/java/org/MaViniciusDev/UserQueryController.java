@@ -1,9 +1,7 @@
-package org.MaViniciusDev.Feign;
+package org.MaViniciusDev;
 
 
 import lombok.AllArgsConstructor;
-import org.MaViniciusDev.AppUser;
-import org.MaViniciusDev.AppUserService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -28,7 +26,7 @@ public class UserQueryController {
     ) {
     }
 
-    @GetMapping("/by-email/{email}")
+    @GetMapping("/by-email/")
     public ResponseEntity<UserInfoDTO> getUserByEmail(@PathVariable String email) {
         var userOpt = appUserService.findByEmail(email);
         if (userOpt.isEmpty()) {

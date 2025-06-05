@@ -1,5 +1,217 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="EntryPointsManager">
+    <entry_points version="2.0">
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.DTO.ReservationDTO academicSpaceId" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.Reservation academicSpacesId" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.Registration.Token.ConfirmationToken appUser" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.Security.SecurityConfig appUserDetailsService" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.AppUserService appUserRepository" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.AppUser appUserRole" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.AppUserController appUserService" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.Registration.RegistrationService appUserService" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.Feign.UserQueryController appUserService" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.DTO.ReservationDTO.ReservationType AULA" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.ReservationType AULA" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.AppUserService bCryptPasswordEncoder" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.Service.ConfirmationTokenService confirmationTokenRepository" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.Registration.Token.ConfirmationTokenService confirmationTokenRepository" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.AppUser confirmationTokens" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.AppUserService confirmationTokenService" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.Registration.RegistrationController confirmationTokenService" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.Registration.RegistrationService confirmationTokenService" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.Token.ConfirmationToken confirmedAt" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.Registration.Token.ConfirmationToken confirmedAt" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.Reservation confirmUse" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.DTO.ReservationDTO confirmUse" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.Token.ConfirmationToken createdAt" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.Registration.Token.ConfirmationToken createdAt" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.Reservation createdAt" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.DTO.ReservationDTO createdAt" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.DTO.AcademicSpaceDTO description" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.AppUser email" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.DTO.AppUserDTO email" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.DTO.AppUserWithReservationDTO email" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.Token.DTO.AuthRequest email" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.Registration.RegistrationController.ResendRequest email" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.Registration.RegistrationRequest email" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.Token.UserResponse email" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.Registration.RegistrationService emailSender" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.Registration.RegistrationService emailValidator" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.AppUser enabled" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.Token.UserResponse enabled" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.Reservation ended" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.DTO.ReservationDTO ended" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.DTO.ReservationDTO.ReservationType EVENTO" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.ReservationType EVENTO" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.Token.ConfirmationToken expiresAt" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.Registration.Token.ConfirmationToken expiresAt" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.AppUser firstName" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.DTO.AppUserWithReservationDTO firstName" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.Registration.RegistrationRequest firstName" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.DTO.AcademicSpaceDTO id" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.AppUser id" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.DTO.AppUserDTO id" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.DTO.AppUserWithReservationDTO id" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.Token.ConfirmationToken id" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.Registration.Token.ConfirmationToken id" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.Reservation id" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.DTO.ReservationDTO id" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.Security.SecurityConfig jwtAuthFilter" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.jwt.JwtAuthenticationFilter jwtService" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.Security.JwtAuthenticationFilter jwtService" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.LoginController jwtService" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.AppUser lastName" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.DTO.AppUserWithReservationDTO lastName" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.Registration.RegistrationRequest lastName" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.AppUser locked" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.Token.UserResponse locked" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.Email.EmailService mailSender" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.DTO.AcademicSpaceDTO name" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.DTO.AppUserDTO name" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.Reservation observations" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.DTO.ReservationDTO observations" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.AppUser password" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.Token.DTO.AuthRequest password" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.Registration.RegistrationRequest password" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.LoginController passwordEncoder" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.Token.UserResponse passwordHash" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.Reservation professorId" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.DTO.ReservationDTO professorId" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.Registration.RegistrationController registrationService" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.Reservation reservationDate" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.DTO.ReservationDTO reservationDate" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.Reservation reservationEnd" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.DTO.ReservationDTO reservationEnd" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.Reservation reservationInit" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.DTO.ReservationDTO reservationInit" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.ReservationService reservationRepository" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.DTO.AppUserWithReservationDTO reservations" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.ReservationController reservationService" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.Token.UserResponse role" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.ReservationService spaceServiceClient" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.Token.DTO.AuthResponse token" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.Token.ConfirmationToken token" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.Registration.Token.ConfirmationToken token" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.Reservation type" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.DTO.ReservationDTO type" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.Token.ConfirmationToken userEmail" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.Service.AppUserDetailsService userServiceClient" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.Security.JwtAuthenticationFilter userServiceClient" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.LoginController userServiceClient" />
+      <entry_point TYPE="field" FQNAME="org.MaViniciusDev.ReservationService userServiceClient" />
+    </entry_points>
+    <pattern value="org.MaViniciusDev.DTO.AcademicSpaceDTO" />
+    <pattern value="org.MaViniciusDev.AppUser" />
+    <pattern value="org.MaViniciusDev.AppUserApplication" />
+    <pattern value="org.MaViniciusDev.AppUserController" />
+    <pattern value="org.MaViniciusDev.Service.AppUserDetailsService" />
+    <pattern value="org.MaViniciusDev.DTO.AppUserDTO" />
+    <pattern value="org.MaViniciusDev.AppUserRepository" />
+    <pattern value="org.MaViniciusDev.AppUserRole" />
+    <pattern value="org.MaViniciusDev.AppUserService" />
+    <pattern value="org.MaViniciusDev.DTO.AppUserWithReservationDTO" />
+    <pattern value="org.MaViniciusDev.AuthApplication" />
+    <pattern value="org.MaViniciusDev.LoginController" method="authenticate" />
+    <pattern value="org.MaViniciusDev.Security.SecurityConfig" method="authenticationManager" />
+    <pattern value="org.MaViniciusDev.Security.SecurityConfig" method="authenticationProvider" />
+    <pattern value="org.MaViniciusDev.Token.DTO.AuthRequest" />
+    <pattern value="org.MaViniciusDev.Token.DTO.AuthResponse" />
+    <pattern value="org.MaViniciusDev.Registration.PasswordEncoderConfig" method="bCryptPasswordEncoder" />
+    <pattern value="org.MaViniciusDev.AppUserController" method="checkUser" />
+    <pattern value="org.MaViniciusDev.Registration.RegistrationController" method="confirm" />
+    <pattern value="org.MaViniciusDev.Registration.Token.ConfirmationToken" />
+    <pattern value="org.MaViniciusDev.Token.ConfirmationToken" />
+    <pattern value="org.MaViniciusDev.Token.ConfirmationToken" method="ConfirmationToken" />
+    <pattern value="org.MaViniciusDev.Registration.Token.ConfirmationTokenRepository" />
+    <pattern value="org.MaViniciusDev.Token.ConfirmationTokenRepository" />
+    <pattern value="org.MaViniciusDev.Registration.Token.ConfirmationTokenService" />
+    <pattern value="org.MaViniciusDev.Service.ConfirmationTokenService" />
+    <pattern value="org.MaViniciusDev.Registration.RegistrationService" method="confirmToken" />
+    <pattern value="org.MaViniciusDev.config.CorsConfig" />
+    <pattern value="org.MaViniciusDev.config.CorsConfig" method="corsWebFilter" />
+    <pattern value="org.MaViniciusDev.ReservationController" method="createReservation" />
+    <pattern value="org.MaViniciusDev.AppUserService" method="deleteById" />
+    <pattern value="org.MaViniciusDev.ReservationController" method="deleteReservation" />
+    <pattern value="org.MaViniciusDev.ReservationService" method="deleteReservation" />
+    <pattern value="org.MaViniciusDev.AppUserController" method="deleteUser" />
+    <pattern value="org.MaViniciusDev.Email.EmailService" />
+    <pattern value="org.MaViniciusDev.Registration.EmailValidator" />
+    <pattern value="org.MaViniciusDev.EurekaServerApplication" />
+    <pattern value="org.MaViniciusDev.AppUserService" method="findAll" />
+    <pattern value="org.MaViniciusDev.AppUserService" method="findByEmail" />
+    <pattern value="org.MaViniciusDev.GatewayApplication" />
+    <pattern value="org.MaViniciusDev.jwt.JwtService" method="generateToken" />
+    <pattern value="org.MaViniciusDev.Security.JwtService" method="generateToken" />
+    <pattern value="org.MaViniciusDev.AppUserController" method="getAllUsers" />
+    <pattern value="org.MaViniciusDev.ReservationService" method="getByProfessorId" />
+    <pattern value="org.MaViniciusDev.ReservationService" method="getBySpaceId" />
+    <pattern value="org.MaViniciusDev.ReservationController" method="getReservationsBySpace" />
+    <pattern value="org.MaViniciusDev.Feign.ReservationClient" method="getReservationsByUser" />
+    <pattern value="org.MaViniciusDev.Feign.SpaceServiceClient" method="getSpaceById" />
+    <pattern value="org.MaViniciusDev.Service.ConfirmationTokenService" method="getToken" />
+    <pattern value="org.MaViniciusDev.Registration.Token.ConfirmationTokenService" method="getToken" />
+    <pattern value="org.MaViniciusDev.Feign.UserQueryController" method="getUserByEmail" />
+    <pattern value="org.MaViniciusDev.Client.UserServiceClient" method="getUserByEmail" />
+    <pattern value="org.MaViniciusDev.Feign.UserServiceClient" method="getUserByEmail" />
+    <pattern value="org.MaViniciusDev.ReservationController" method="getUserReservations" />
+    <pattern value="org.MaViniciusDev.jwt.JwtService" method="isTokenValid" />
+    <pattern value="org.MaViniciusDev.Security.JwtService" method="isTokenValid" />
+    <pattern value="org.MaViniciusDev.jwt.JwtAuthenticationFilter" />
+    <pattern value="org.MaViniciusDev.Security.JwtAuthenticationFilter" />
+    <pattern value="org.MaViniciusDev.jwt.JwtService" />
+    <pattern value="org.MaViniciusDev.Security.JwtService" />
+    <pattern value="org.MaViniciusDev.LoginController" />
+    <pattern value="org.MaViniciusDev.Main" />
+    <pattern value="org.MaViniciusDev.AppUserApplication" method="main" />
+    <pattern value="org.MaViniciusDev.AuthApplication" method="main" />
+    <pattern value="org.MaViniciusDev.EurekaServerApplication" method="main" />
+    <pattern value="org.MaViniciusDev.GatewayApplication" method="main" />
+    <pattern value="org.MaViniciusDev.Main" method="main" />
+    <pattern value="org.MaViniciusDev.ReservationApplication" method="main" />
+    <pattern value="org.MaViniciusDev.ReservationService" method="makeReservation" />
+    <pattern value="org.MaViniciusDev.Security.SecurityConfig" method="passwordEncoder" />
+    <pattern value="org.MaViniciusDev.Registration.PasswordEncoderConfig" />
+    <pattern value="org.MaViniciusDev.AppUserController.ProfileDTO" />
+    <pattern value="org.MaViniciusDev.AppUserController.ProfileDTO" method="ProfileDTO" />
+    <pattern value="org.MaViniciusDev.Registration.RegistrationController" method="register" />
+    <pattern value="org.MaViniciusDev.Registration.RegistrationService" method="register" />
+    <pattern value="org.MaViniciusDev.Registration.RegistrationController" />
+    <pattern value="org.MaViniciusDev.Registration.RegistrationRequest" />
+    <pattern value="org.MaViniciusDev.Registration.RegistrationService" />
+    <pattern value="org.MaViniciusDev.Registration.RegistrationController" method="resend" />
+    <pattern value="org.MaViniciusDev.Registration.RegistrationController.ResendRequest" />
+    <pattern value="org.MaViniciusDev.Registration.RegistrationService" method="resendToken" />
+    <pattern value="org.MaViniciusDev.Reservation" />
+    <pattern value="org.MaViniciusDev.ReservationApplication" />
+    <pattern value="org.MaViniciusDev.Feign.ReservationClient" />
+    <pattern value="org.MaViniciusDev.Exception.ReservationConflictException" />
+    <pattern value="org.MaViniciusDev.Exception.ReservationConflictException" method="ReservationConflictException" />
+    <pattern value="org.MaViniciusDev.ReservationController" />
+    <pattern value="org.MaViniciusDev.DTO.ReservationDTO" />
+    <pattern value="org.MaViniciusDev.ReservationRepository" />
+    <pattern value="org.MaViniciusDev.ReservationService" />
+    <pattern value="org.MaViniciusDev.DTO.ReservationDTO.ReservationType" />
+    <pattern value="org.MaViniciusDev.ReservationType" />
+    <pattern value="org.MaViniciusDev.Exception.ResourceNotFoundException" />
+    <pattern value="org.MaViniciusDev.Exception.ResourceNotFoundException" method="ResourceNotFoundException" />
+    <pattern value="org.MaViniciusDev.AppUserController.RoleDTO" />
+    <pattern value="org.MaViniciusDev.AppUserController.RoleDTO" method="RoleDTO" />
+    <pattern value="org.MaViniciusDev.Service.ConfirmationTokenService" method="saveConfirmationToken" />
+    <pattern value="org.MaViniciusDev.Registration.Token.ConfirmationTokenService" method="saveConfirmationToken" />
+    <pattern value="org.MaViniciusDev.Security.SecurityConfig" />
+    <pattern value="org.MaViniciusDev.Security.SecurityConfig" method="securityFilterChain" />
+    <pattern value="org.MaViniciusDev.Service.ConfirmationTokenService" method="setConfirmedAt" />
+    <pattern value="org.MaViniciusDev.Feign.SpaceServiceClient" />
+    <pattern value="org.MaViniciusDev.AppUserService" method="updateName" />
+    <pattern value="org.MaViniciusDev.AppUserController" method="updateProfile" />
+    <pattern value="org.MaViniciusDev.AppUserController" method="updateRole" />
+    <pattern value="org.MaViniciusDev.AppUserService" method="updateRole" />
+    <pattern value="org.MaViniciusDev.Feign.UserQueryController" />
+    <pattern value="org.MaViniciusDev.Token.UserResponse" />
+    <pattern value="org.MaViniciusDev.Client.UserServiceClient" />
+    <pattern value="org.MaViniciusDev.Feign.UserServiceClient" />
+  </component>
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="MavenProjectsManager">
     <option name="originalFiles">

@@ -5,9 +5,9 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-@FeignClient("USERSERVICE")
+@FeignClient(name = "AppUser")
 public interface UserServiceClient {
 
-    @GetMapping("/api/v1/users/by-email")
+    @GetMapping("/by-email/")
     AppUserDTO getUserByEmail(@RequestParam("email") String email);
 }

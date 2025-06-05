@@ -38,8 +38,7 @@ public class RegistrationController {
             return buildSimplePage(
                     "Falha na Confirmação",
                     "❌ Link de confirmação inválido.",
-                    "Voltar ao Login",
-                    LOGIN_URL
+                    "Voltar ao Login"
             );
         }
 
@@ -50,8 +49,7 @@ public class RegistrationController {
             return buildSimplePage(
                     "Conta Já Ativada",
                     "✅ Este e-mail já foi confirmado anteriormente.",
-                    "Ir para Login",
-                    LOGIN_URL
+                    "Ir para Login"
             );
         }
 
@@ -65,16 +63,14 @@ public class RegistrationController {
         return buildSimplePage(
                 "Conta Confirmada",
                 "✅ Seu e-mail foi ativado com sucesso! Agora você pode fazer login.",
-                "Ir para Login",
-                LOGIN_URL
+                "Ir para Login"
         );
     }
 
     private String buildSimplePage(
             String title,
             String message,
-            String buttonText,
-            String buttonHref
+            String buttonText
     ) {
         return "<!DOCTYPE html>" +
                 "<html lang=\"pt-BR\">" +
@@ -99,7 +95,7 @@ public class RegistrationController {
                 "        <p style=\"font-size:16px;color:#333;"
                 + "line-height:1.5;\">" + message + "</p>" +
                 "        <div style=\"margin-top:30px;\">" +
-                "          <a href=\"" + buttonHref + "\" "
+                "          <a href=\"" + RegistrationController.LOGIN_URL + "\" "
                 + "style=\"background:#a3b2ff;color:#000;"
                 + "text-decoration:none;padding:12px 24px;border-radius:6px;"
                 + "font-weight:bold;font-size:16px;display:inline-block;\">" +
