@@ -21,7 +21,7 @@ public class LoginController {
     @PostMapping("/login")
     public ResponseEntity<?> authenticate(@RequestBody AuthRequest authRequest) {
         try {
-            UserResponse user = userServiceClient.getUserByEmail(authRequest.getEmail());
+            UserResponse user = userServiceClient.findByEmail(authRequest.getEmail());
 
             if (!user.isEnabled() || user.isLocked()) {
                 return ResponseEntity.status(403).body("Usuário bloqueado ou desabilitado");

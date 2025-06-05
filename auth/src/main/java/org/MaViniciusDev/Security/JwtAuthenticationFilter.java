@@ -43,7 +43,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
 
         if (username != null && SecurityContextHolder.getContext().getAuthentication() == null) {
             // Chama o Feign Client
-            UserResponse userResponse = userServiceClient.getUserByEmail(username);
+            UserResponse userResponse = userServiceClient.findByEmail(username);
 
             if (userResponse != null && jwtService.isTokenValid(jwt, userResponse.getEmail())) {
 

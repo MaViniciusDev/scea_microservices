@@ -8,6 +8,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 @FeignClient(name = "AppUser", path = "/api/v1/users")
 public interface UserServiceClient {
     @GetMapping("/by-email/{email}")
-    UserResponse getUserByEmail(@PathVariable("email") String email);
+    UserResponse findByEmail(@PathVariable("email") String email);
 
 }
