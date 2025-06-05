@@ -21,8 +21,8 @@ public class Reservation {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private Long academicSpacesId;
-    private Long professorId;
+    private Long spaceId;
+    private Long userId;
 
     private LocalDate reservationDate;
     private LocalTime reservationInit;

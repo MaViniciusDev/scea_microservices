@@ -63,4 +63,12 @@ public class AcademicSpacesController {
             return ResponseEntity.status(500).body("Erro ao excluir espaço: " + e.getMessage());
         }
     }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<AcademicSpaces> getSpaceById(@PathVariable("id") Long id) {
+        AcademicSpaces space = academicSpacesService.getById(id)
+                .orElseThrow(() -> new RuntimeException("Espaço não encontrado: " + id));
+        return ResponseEntity.ok(space);
+    }
+
 }

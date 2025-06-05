@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @AllArgsConstructor
@@ -64,6 +65,10 @@ public class AcademicSpacesService {
         AcademicSpaces existing = repo.findById(id)
                 .orElseThrow(() -> new RuntimeException("Espaço não encontrado: " + id));
         repo.delete(existing);
+    }
+
+    public Optional<AcademicSpaces> getById(Long id) {
+        return repo.findById(id);
     }
 
 

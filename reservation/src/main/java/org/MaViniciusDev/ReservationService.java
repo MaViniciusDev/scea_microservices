@@ -1,5 +1,6 @@
 package org.MaViniciusDev;
 
+import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.MaViniciusDev.DTO.AcademicSpaceDTO;
 import org.MaViniciusDev.DTO.UserInfoDTO;
@@ -16,7 +17,8 @@ import java.util.List;
 
 @Service
 @Transactional
-@RequiredArgsConstructor
+//@RequiredArgsConstructor
+@AllArgsConstructor
 public class ReservationService {
 
     private final ReservationRepository reservationRepository;
@@ -30,11 +32,11 @@ public class ReservationService {
             throw new ResourceNotFoundException("Usuário não encontrado: " + professorEmail);
         }
 
-        reservation.setProfessorId(professor.getId());
+        reservation.setUserId(professor.getId());
 
-        AcademicSpaceDTO space = spaceServiceClient.getSpaceById(reservation.getAcademicSpacesId());
+        AcademicSpaceDTO space = spaceServiceClient.getSpaceById(reservation.getSpaceId());
         if (space == null) {
-            throw new ResourceNotFoundException("Espaço não encontrado: id=" + reservation.getAcademicSpacesId());
+            throw new ResourceNotFoundException("Espaço não encontrado: id=" + reservation.getSpaceId());
         }
 
         LocalDate date = reservation.getReservationDate();
@@ -50,7 +52,7 @@ public class ReservationService {
         }
 
         List<Reservation> conflicts = reservationRepository
-                .findConflictingReservations(reservation.getAcademicSpacesId(), date, init, end);
+                .findConflictingReservations(reservation.getSpaceId(), date, init, end);
 
         if (!conflicts.isEmpty()) {
             throw new ReservationConflictException("Já existe reserva conflitando neste horário.");
@@ -65,11 +67,17 @@ public class ReservationService {
         reservationRepository.delete(r);
     }
 
-    public List<Reservation> getByProfessorId(Long professorId) {
-        return reservationRepository.findByProfessorId(professorId);
+    public List<Reservation> getByProfessorEmail(String email) {
+        UserInfoDTO userDto = userServiceClient.getUserByEmail(email);
+        if (userDto == null) {
+            throw new ResourceNotFoundException("Usuário não encontrado: " + email);
+        }
+        Long userId = userDto.getId();
+
+        return reservationRepository.findByUserId(userId);
     }
 
     public List<Reservation> getBySpaceId(Long spaceId) {
-        return reservationRepository.findByAcademicSpacesId(spaceId);
+        return reservationRepository.findBySpaceId(spaceId);
     }
 }

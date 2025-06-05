@@ -31,10 +31,7 @@ public class AppUserController {
     public record ProfileDTO(String firstName, String lastName) {
     }
 
-    /**
-     * Endpoint público para checar existência de um e-mail.
-     * GET /api/v1/users/exists?email=...
-     */
+
     @GetMapping("/exists")
     public Map<String, Object> checkUser(@RequestParam String email) {
         Map<String, Object> response = new HashMap<>();
@@ -53,11 +50,7 @@ public class AppUserController {
         return response;
     }
 
-    /**
-     * Lista todos os usuários.
-     * O Gateway já valida se o chamador tem autoridade "ADMIN" antes de chegar aqui.
-     * GET /api/v1/users
-     */
+
     @GetMapping
     public List<UserDTO> getAllUsers(
             @RequestHeader("X-Authenticated-User") String usernameHeader
@@ -73,28 +66,20 @@ public class AppUserController {
                 .collect(Collectors.toList());
     }
 
-    /**
-     * Remove um usuário por ID.
-     * O Gateway já garante que somente "ADMIN" chegue até aqui.
-     * DELETE /api/v1/users/{id}
-     */
-    @DeleteMapping("/{id}")
+
+    @DeleteMapping("/delete/{id}")
     public ResponseEntity<Void> deleteUser(
-            @PathVariable Long id,
+            @PathVariable("id") Long id,
             @RequestHeader("X-Authenticated-User") String usernameHeader
     ) {
         appUserService.deleteById(id);
         return ResponseEntity.ok().build();
     }
 
-    /**
-     * Atualiza o role de um usuário específico.
-     * O Gateway já garante autoridade "ADMIN".
-     * PATCH /api/v1/users/{id}/role
-     */
+
     @PatchMapping("/{id}/role")
     public UserDTO updateRole(
-            @PathVariable Long id,
+            @PathVariable("id") Long id,
             @RequestBody RoleDTO dto,
             @RequestHeader("X-Authenticated-User") String usernameHeader
     ) {

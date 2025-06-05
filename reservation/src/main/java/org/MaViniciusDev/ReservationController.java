@@ -14,26 +14,31 @@ public class ReservationController {
 
     private final ReservationService reservationService;
 
-    @PostMapping
-    public ResponseEntity<Reservation> createReservation(@RequestBody Reservation reservation, @RequestBody String professoremail) {
-        Reservation created = reservationService.makeReservation(reservation, professoremail);
+    @PostMapping("/create")
+    public ResponseEntity<Reservation> createReservation(
+            @RequestBody Reservation reservation,
+            @RequestHeader("X-Authenticated-User") String professorEmail
+    ) {
+        Reservation created = reservationService.makeReservation(reservation, professorEmail);
         return ResponseEntity.status(HttpStatus.CREATED).body(created);
     }
 
-    @DeleteMapping("/{id}")
-    public ResponseEntity<String> deleteReservation(@PathVariable Long id) {
+    @DeleteMapping("/delete/{id}")
+    public ResponseEntity<String> deleteReservation(@PathVariable("id") Long id) {
         reservationService.deleteReservation(id);
         return ResponseEntity.ok("Reserva deletada com sucesso.");
     }
 
-    @GetMapping("/user/{professorId}")
-    public ResponseEntity<List<Reservation>> getUserReservations(@PathVariable Long professorId) {
-        List<Reservation> reservas = reservationService.getByProfessorId(professorId);
+    @GetMapping("/user/email/{email}")
+    public ResponseEntity<List<Reservation>> getUserReservationsByEmail(
+            @PathVariable("email") String email
+    ) {
+        List<Reservation> reservas = reservationService.getByProfessorEmail(email);
         return ResponseEntity.ok(reservas);
     }
 
     @GetMapping("/space/{spaceId}")
-    public ResponseEntity<List<Reservation>> getReservationsBySpace(@PathVariable Long spaceId) {
+    public ResponseEntity<List<Reservation>> getReservationsBySpace(@PathVariable("spaceId") Long spaceId) {
         List<Reservation> reservas = reservationService.getBySpaceId(spaceId);
         return ResponseEntity.ok(reservas);
     }
