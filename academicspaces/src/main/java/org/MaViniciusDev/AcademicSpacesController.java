@@ -43,7 +43,7 @@ public class AcademicSpacesController {
     }
 
     @PutMapping("/update-availability/{id}")
-    public ResponseEntity<?> updateAvailability(@PathVariable Long id,
+    public ResponseEntity<?> updateAvailability(@PathVariable("id") Long id,
                                                 @RequestParam boolean active) {
         try {
             AcademicSpaces updated = academicSpacesService.updateAvailability(id, active, null);
@@ -55,7 +55,7 @@ public class AcademicSpacesController {
     }
 
     @DeleteMapping("/delete/{id}")
-    public ResponseEntity<?> deleteSpace(@PathVariable Long id) {
+    public ResponseEntity<?> deleteSpace(@PathVariable("id") Long id) {
         try {
             academicSpacesService.deleteSpace(id);
             return ResponseEntity.noContent().build();

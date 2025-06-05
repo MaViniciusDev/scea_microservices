@@ -13,7 +13,7 @@ import java.util.function.Function;
 @Service
 public class JwtService {
 
-    private static final String SECRET_KEY = "super-secret-key-for-jwt-should-be-long-and-secure";
+    private static final String SECRET_KEY = "irineuvocenaosabeenemeujwtsecuritykey";
 
     private final Key key = Keys.hmacShaKeyFor(SECRET_KEY.getBytes());
 
